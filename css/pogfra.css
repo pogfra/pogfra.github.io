@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace, sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #fdf6e3;
+  min-width: 365px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #cb4b16;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+a {
+  color: #268bd2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: #2aa198;
+  }
+}
+
+section {
+  padding-top: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 960px;
+}
+
+.hero {
+  h1 {
+    &:before {
+      content: ">\A0";
+      width: 2rem;
+      display: inline-block;
+    }
+  }
+
+  .cursor {
+    display: inline-block;
+    &:before {
+        content: ">\A0";
+        width: 2rem;
+        display: inline-block;
+      }
+  }
+
+  h3 {
+    padding-left: 2rem;
+  }
+}
+
+
+.terminal-header {
+  height: 28px;
+  background-color: #e4e3e5;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .header-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 9px;
+  }
+
+  .red {
+    background-color: #f96256;
+    border: 1px solid #f65549;
+  }
+
+  .yellow {
+    background-color: #fdbc3d;
+    border: 1px solid #ffb524;
+  }
+
+  .green {
+    background-color: #33c948;
+    border: 1px solid #2dbb41;
+  }
+}
+
+.terminal-body {
+  height: 500px;
+  color: #fdf6e3;
+  background-color: #073642;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  overflow-y: scroll;
+
+  > div {
+    margin-bottom: 1rem;
+  }
+
+  .caret {
+    &:before {
+        content: ">\A0";
+        width: 1rem;
+        display: inline-block;
+      }
+  }
+
+  .return {
+    padding-left: 1rem;
+    color: #e7d184;
+  }
+}
+
+.avatar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  height: auto;
+  max-width: 200px;
+}
+
+.cursor {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    display: inline-block;
+    background-color: #fdf6e3;
+    vertical-align: top;
+    width: 3px;
+    height: 18px;
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+  }
+
+
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
