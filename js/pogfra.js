@@ -32,7 +32,7 @@ document.querySelector('.skills .return').textContent = '';
 const contactInput = document.querySelector('.contact .input').textContent;
 document.querySelector('.contact .input').textContent = '';
 
-const contactReturn = document.querySelector('.contact .return').textContent;
+const contactReturn = document.querySelector('.contact .return').innerHTML;
 document.querySelector('.contact .return').textContent = '';
 
 window.addEventListener('load', () => {
